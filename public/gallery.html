@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Gallery</title>
+    </head>
+    <body>
+        <div class="w-[90%] px-10 py-20 m-auto">
+            <h1 class="text-4xl">Fotogaléria</h1>
+            <a href="index.html" class="text-lg py-10 flex items-center">
+                <ion-icon name="arrow-back-outline" class="pr-2"></ion-icon>
+                <p>Architektúra</p>
+            </a>
+            <section class="grid grid-cols-4 auto-rows-fr gap-8">
+                <div
+                    id="open-image"
+                    class="shadow-card rounded bg-blue w-full h-[295px] cursor-pointer"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1664400226582-1bc3d443f690?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+                        class="w-full h-full top-0 left-0 object-cover object-center rounded"
+                    />
+                </div>
+
+                <div
+                    id="open-image"
+                    class="shadow-card rounded bg-blue w-full h-[295px] cursor-pointer"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1664221275551-f8a7ddc0f193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+                        class="w-full h-full top-0 left-0 object-cover object-center rounded"
+                    />
+                </div>
+
+                <div
+                    id="open-image"
+                    class="shadow-card rounded bg-blue w-full h-[295px] cursor-pointer"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1664450631808-146f4feca397?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+                        class="w-full h-full top-0 left-0 object-cover object-center rounded"
+                    />
+                </div>
+
+                <div
+                    id="open-image"
+                    class="shadow-card rounded bg-blue w-full h-[295px] cursor-pointer"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1664380619435-653300582a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+                        class="w-full h-full top-0 left-0 object-cover object-center rounded"
+                    />
+                </div>
+
+                <div
+                    id="open-image"
+                    class="shadow-card rounded bg-blue w-full h-[295px] cursor-pointer"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1664310748329-6710c43799a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
+                        class="w-full h-full top-0 left-0 object-cover object-center rounded"
+                    />
+                </div>
+
+                <div
+                    id="open-modal"
+                    class="w-full h-full grid place-items-center rounded shadow-card cursor-pointer"
+                >
+                    <div class="flex flex-col items-center">
+                        <ion-icon
+                            name="add-circle-outline"
+                            class="text-[24px] text-gray-600"
+                        ></ion-icon>
+                        <p class="text-base pt-4">Pridať kategóriu</p>
+                    </div>
+                </div>
+            </section>
+
+            <div
+                id="modal"
+                class="w-full h-full fixed bg-modalBG inset-0 right-0 bottom-0 z-20 hidden place-items-center"
+            >
+                <div
+                    class="w-[100%] sm:w-[90%] grid place-items-center px-2 sm:px-10"
+                >
+                    <section
+                        class="w-full max-w-[560px] bg-white p-10 sm:p-12 rounded-2xl"
+                    >
+                        <div class="flex justify-between items-center mb-7">
+                            <h1 class="text-2xl">Pridať fotky</h1>
+                            <div
+                                id="close-modal"
+                                class="flex items-center cursor-pointer"
+                            >
+                                <ion-icon
+                                    name="close-outline"
+                                    class="text-2xl"
+                                ></ion-icon>
+                            </div>
+                        </div>
+
+                        <div
+                            class="py-12 border border-[#DDDDDD] border-dashed rounded grid place-items-center"
+                        >
+                            <div class="flex flex-col items-center">
+                                <ion-icon
+                                    name="image-outline"
+                                    class="text-2xl"
+                                ></ion-icon>
+                                <p class="text-base py-3">Sem presunte fotky</p>
+                                <p class="text-base opacity-50 pb-4">alebo</p>
+                                <div>
+                                    <label
+                                        for="upload-files"
+                                        class="h-12 px-8 grid place-items-center border-[2px] border-black rounded cursor-pointer hover:bg-black hover:text-white transition ease-in-out delay-75"
+                                        >Vyberte súbory</label
+                                    >
+                                    <input
+                                        type="file"
+                                        id="upload-files"
+                                        class="hidden"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="text-base w-full h-16 mt-7 rounded bg-black text-white hover:bg-blue-700 transition ease-in-out delay-75"
+                        >
+                            Pridať
+                        </button>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                id="image-modal"
+                class="w-full h-full fixed bg-modalBG top-0 left-0 right-0 bottom-0 z-20 hidden place-items-center"
+            >
+                <section class="w-[90%] px-10 grid place-items-center">
+                    <div class="w-full max-w-5xl">
+                        <div class="aspect-video relative">
+                            <img
+                                class="absolute inset-0 w-full h-full object-cover cursor-default rounded-lg shadow-card md:rounded-2xl"
+                                src="https://images.unsplash.com/photo-1663940019982-c14294717dbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                            />
+                            <div
+                                class="w-[50px] h-[50px] rounded-full bg-white absolute left-0 top-1/2 -translate-y-2/4 -translate-x-2/4 cursor-pointer grid place-items-center text-base md:w-[80px] md:h-[80px] md:text-2xl"
+                            >
+                                <ion-icon name="arrow-back-outline"></ion-icon>
+                            </div>
+                            <div
+                                class="w-[50px] h-[50px] rounded-full bg-white absolute right-0 top-1/2 -translate-y-2/4 translate-x-2/4 cursor-pointer grid place-items-center text-base md:w-[80px] md:h-[80px] md:text-2xl"
+                            >
+                                <ion-icon
+                                    name="arrow-forward-outline"
+                                ></ion-icon>
+                            </div>
+
+                            <div
+                                id="close-image"
+                                class="w-[50px] h-[50px] rounded-full bg-black bg-opacity-50 text-white absolute right-6 top-6 cursor-pointer grid place-items-center text-base md:w-[80px] md:h-[80px] md:text-2xl"
+                            >
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
